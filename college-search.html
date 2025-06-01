@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Government Polytechnic Colleges - MahaPoly</title>
+  <meta name="description" content="Search through all Government Polytechnic Colleges in Maharashtra. Find campus info, hostels, labs, faculty, and more." />
+  <meta name="keywords" content="MahaPoly, Polytechnic, Government Colleges Maharashtra, College Search, Polytechnic College List" />
+  <meta name="author" content="MahaPoly Team" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 1000 });
+    });
+  </script>
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+  <section class="text-center py-16">
+    <h1 class="text-5xl font-extrabold text-teal-400 mb-6">Search Polytechnic Colleges</h1>
+    <p class="text-lg text-gray-300 mb-8">Explore the official list of all Government Polytechnic Colleges in Maharashtra</p>
+    <div class="mb-10">
+      <input type="text" id="searchBox" placeholder="Type a college name..." class="px-6 py-3 w-96 rounded-xl text-black focus:outline-none" />
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pb-20" id="collegeGrid">
+    <!-- College cards rendered here -->
+  </section>
+
+  <footer class="text-center py-8 text-gray-400 text-sm">
+    &copy; 2025 MahaPoly - Powered by Future Engineers ⚙️
+  </footer>
+
+  <script>
+    const colleges = [
+      "Mumbai", "Pune", "Nagpur", "Nashik", "Aurangabad", "Kolhapur", "Amravati", "Nanded",
+      "Thane", "Jalgaon", "Solapur", "Latur", "Satara", "Chandrapur", "Akola", "Beed",
+      "Ahmednagar", "Parbhani", "Yavatmal", "Buldhana", "Wardha", "Osmanabad", "Gondia",
+      "Ratnagiri", "Hingoli", "Washim", "Nandurbar", "Palghar", "Sangli", "Raigad",
+      "Gadchiroli", "Sindhudurg", "Bhandara", "Dhule", "Ausari Khurud"
+    ];
+
+    const grid = document.getElementById("collegeGrid");
+    const searchBox = document.getElementById("searchBox");
+
+    function renderColleges(filter = "") {
+      grid.innerHTML = "";
+      colleges.filter(name => name.toLowerCase().includes(filter.toLowerCase())).forEach(name => {
+        const slug = name.toLowerCase().replace(/\s+/g, '-');
+        const card = document.createElement("a");
+        card.href = `govt-poly-${slug}.html`;
+        card.setAttribute("data-aos", "fade-up");
+        card.className = "bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300 block text-center";
+        card.innerHTML = `
+          <h2 class="text-2xl font-bold text-teal-300 mb-1">Government Polytechnic ${name}</h2>
+          <p class="text-sm text-gray-400">Located in ${name}, Maharashtra</p>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    searchBox.addEventListener("input", () => renderColleges(searchBox.value));
+    renderColleges();
+  </script>
+</body>
+</html>

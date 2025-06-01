@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - MahaPoly</title>
+  <meta name="description" content="Get in touch with MahaPoly team. Send us feedback, suggestions, or queries about Government Polytechnic Colleges in Maharashtra." />
+  <meta name="keywords" content="MahaPoly, Contact, Feedback, Support, Polytechnic Colleges Maharashtra" />
+  <meta name="author" content="MahaPoly Team" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 1000 });
+    });
+  </script>
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-900 p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-teal-400">MahaPoly</a>
+      <ul class="flex space-x-6 text-gray-300">
+        <li><a href="index.html" class="hover:text-white">Home</a></li>
+        <li><a href="college-search.html" class="hover:text-white">Search Colleges</a></li>
+        <li><a href="https://msbte.org.in" target="_blank" class="hover:text-white">MSBTE</a></li>
+        <li><a href="#contact" class="hover:text-white text-teal-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Header Section -->
+  <section class="text-center py-16" id="contact">
+    <h1 class="text-5xl font-extrabold text-teal-400 mb-6" data-aos="fade-down">Contact Us</h1>
+    <p class="text-lg text-gray-300 mb-8" data-aos="fade-up">We'd love to hear from you! Send us your feedback, suggestions, or queries.</p>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="max-w-4xl mx-auto px-4 pb-20">
+    <div class="bg-gray-800 rounded-2xl shadow-2xl p-8" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-teal-300 mb-8 text-center">📝 Feedback Form</h2>
+      
+      <form id="contactForm" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name *</label>
+            <input type="text" id="name" name="name" required 
+                   class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 border border-gray-600">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address *</label>
+            <input type="email" id="email" name="email" required 
+                   class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 border border-gray-600">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+            <input type="tel" id="phone" name="phone" 
+                   class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 border border-gray-600">
+          </div>
+          <div>
+            <label for="category" class="block text-sm font-medium text-gray-300 mb-2">Category *</label>
+            <select id="category" name="category" required 
+                    class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 border border-gray-600">
+              <option value="">Select Category</option>
+              <option value="feedback">General Feedback</option>
+              <option value="suggestion">Suggestion</option>
+              <option value="bug-report">Bug Report</option>
+              <option value="college-info">College Information Query</option>
+              <option value="feature-request">Feature Request</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject *</label>
+          <input type="text" id="subject" name="subject" required 
+                 class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 border border-gray-600"
+                 placeholder="Brief subject of your message">
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message *</label>
+          <textarea id="message" name="message" rows="6" required 
+                    class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 border border-gray-600 resize-vertical"
+                    placeholder="Please share your thoughts, feedback, or queries in detail..."></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" id="submitBtn"
+                  class="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            📤 Send Message
+          </button>
+        </div>
+      </form>
+
+      <!-- Success Message -->
+      <div id="successMessage" class="hidden mt-6 p-4 bg-green-600 rounded-lg text-center">
+        <p class="text-white font-semibold">✅ Thank you! Your message has been sent successfully. We'll get back to you soon!</p>
+      </div>
+
+      <!-- Error Message -->
+      <div id="errorMessage" class="hidden mt-6 p-4 bg-red-600 rounded-lg text-center">
+        <p class="text-white font-semibold">❌ Sorry, there was an error sending your message. Please try again or contact us directly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Information Section -->
+  <section class="py-16 bg-gray-800">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold text-teal-300 mb-8" data-aos="fade-up">📞 Get in Touch</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl">📧</div>
+          <h4 class="text-xl font-semibold text-white">Email Us</h4>
+          <p class="text-gray-300">support@mahapoly.in</p>
+        </div>
+        <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl">💬</div>
+          <h4 class="text-xl font-semibold text-white">WhatsApp</h4>
+          <p class="text-gray-300">Quick support via WhatsApp</p>
+        </div>
+        <div class="space-y-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-4xl">⏰</div>
+          <h4 class="text-xl font-semibold text-white">Response Time</h4>
+          <p class="text-gray-300">Within 24 hours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 text-gray-400 text-sm bg-black">
+    <p>Have questions? Reach us at <a href="mailto:support@mahapoly.in" class="underline">support@mahapoly.in</a></p>
+    <p class="mt-2">&copy; 2025 MahaPoly - Made with ❤️ for students by students.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(this);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const phone = formData.get('phone') || 'Not provided';
+      const category = formData.get('category');
+      const subject = formData.get('subject');
+      const message = formData.get('message');
+      
+      // Create WhatsApp message
+      const whatsappMessage = `🔔 *New MahaPoly Contact Form Submission*
+      
+*Name:* ${name}
+*Email:* ${email}
+*Phone:* ${phone}
+*Category:* ${category}
+*Subject:* ${subject}
+
+*Message:*
+${message}
+
+---
+Sent from MahaPoly Contact Form`;
+
+      // Your WhatsApp number
+      const phoneNumber = '919527266485';
+      
+      // Create WhatsApp URL
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+      
+      // Show loading state
+      const submitBtn = document.getElementById('submitBtn');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '📤 Sending...';
+      submitBtn.disabled = true;
+      
+      // Simulate form processing delay
+      setTimeout(() => {
+        // Open WhatsApp
+        window.open(whatsappUrl, '_blank');
+        
+        // Show success message
+        document.getElementById('successMessage').classList.remove('hidden');
+        document.getElementById('errorMessage').classList.add('hidden');
+        
+        // Reset form
+        this.reset();
+        
+        // Reset button
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          document.getElementById('successMessage').classList.add('hidden');
+        }, 5000);
+        
+      }, 1000);
+    });
+
+    // Real-time validation
+    const requiredFields = ['name', 'email', 'category', 'subject', 'message'];
+    requiredFields.forEach(fieldId => {
+      const field = document.getElementById(fieldId);
+      field.addEventListener('blur', function() {
+        if (this.value.trim() === '') {
+          this.classList.add('border-red-500');
+        } else {
+          this.classList.remove('border-red-500');
+          this.classList.add('border-green-500');
+        }
+      });
+    });
+
+    // Email validation
+    document.getElementById('email').addEventListener('blur', function() {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (this.value && !emailRegex.test(this.value)) {
+        this.classList.add('border-red-500');
+      } else if (this.value) {
+        this.classList.remove('border-red-500');
+        this.classList.add('border-green-500');
+      }
+    });
+  </script>
+</body>
+</html>
