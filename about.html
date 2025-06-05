@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Yash Vijay Date</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .side-panel {
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .card {
+            background: #212121;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 10px 10px 20px rgb(15, 15, 15), -10px -10px 20px rgb(50, 50, 50);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 15px 15px 30px rgb(10, 10, 10), -15px -15px 30px rgb(60, 60, 60);
+        }
+        
+        .card h3 {
+            color: #0066cc;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .card p, .card li {
+            color: #ccc;
+            line-height: 1.6;
+        }
+        
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .skill-bar {
+            width: 100px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #004080, #0066cc);
+            border-radius: 3px;
+        }
+        
+        @media (max-width: 1200px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .side-panel {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side Panel -->
+        <div class="side-panel">
+            <!-- Skills Card -->
+            <div class="card">
+                <h3>🛠️ Technical Skills</h3>
+                <div class="skill-item">
+                    <span style="color: #ccc;">HTML/CSS</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span style="color: #ccc;">JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span style="color: #ccc;">Python</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span style="color: #ccc;">Java</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education Card -->
+            <div class="card">
+                <h3>🎓 Education</h3>
+                <p><strong style="color: #0066cc;">Computer Engineering</strong></p>
+                <p style="color: #888;">Maharashtra State Board of Technical Education</p>
+                <p style="color: #888;">Expected Graduation: 2026</p>
+            </div>
+            
+            <!-- Interests Card -->
+            <div class="card">
+                <h3>🎯 Interests</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 8px;">• Web Development</li>
+                    <li style="margin-bottom: 8px;">• Software Engineering</li>
+                    <li style="margin-bottom: 8px;">• Problem Solving</li>
+                    <li style="margin-bottom: 8px;">• Technology Innovation</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Center Profile Card (Your existing code) -->
+        <div style="
+            width: 300px;
+            height: 400px;
+            border-radius: 30px;
+            background: #212121;
+            box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='20px 20px 40px rgb(15, 15, 15), -20px -20px 40px rgb(70, 70, 70)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60)';">
+            
+            <!-- Avatar -->
+            <div style="
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #004080, #0066cc);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                margin-bottom: 20px;
+                box-shadow: 0 8px 20px rgba(0, 64, 128, 0.3);
+            ">👨‍💻</div>
+            
+            <!-- Name -->
+            <h2 style="
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+                text-align: center;
+                background: linear-gradient(135deg, #004080, #0066cc);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: white;
+            ">Yash Vijay Date</h2>
+            
+            <!-- Role -->
+            <p style="
+                font-size: 1rem;
+                color: #888;
+                margin-bottom: 20px;
+                text-align: center;
+            ">Computer Engineering Student</p>
+            
+            <!-- Contact Info Container -->
+            <div style="width: 100%;">
+                <!-- Email -->
+                <div style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    margin-bottom: 15px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    background: rgba(255, 255, 255, 0.05);
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.transform='translateX(0)';">
+                    <svg style="width: 20px; height: 20px; color: #0066cc; flex-shrink: 0;" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                    </svg>
+                    <a href="mailto:yashdate01@gmail.com" style="
+                        color: #ccc;
+                        text-decoration: none;
+                        transition: color 0.3s ease;
+                    " onmouseover="this.style.color='#0066cc';" onmouseout="this.style.color='#ccc';">yashdate01@gmail.com</a>
+                </div>
+                
+                <!-- Branch -->
+                <div style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    margin-bottom: 15px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    background: rgba(255, 255, 255, 0.05);
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.transform='translateX(0)';">
+                    <svg style="width: 20px; height: 20px; color: #0066cc; flex-shrink: 0;" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
+                    </svg>
+                    <span style="color: #ccc;">Computer Engineering</span>
+                </div>
+                
+                <!-- Portfolio -->
+                <div style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    margin-bottom: 15px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    background: rgba(255, 255, 255, 0.05);
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.transform='translateX(0)';">
+                    <svg style="width: 20px; height: 20px; color: #0066cc; flex-shrink: 0;" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span style="color: #ccc;">WPD Practicals Portfolio</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Side Panel -->
+        <div class="side-panel">
+            <!-- Projects Card -->
+            <div class="card">
+                <h3>💼 Recent Projects</h3>
+                <div style="margin-bottom: 15px;">
+                    <h4 style="color: #0066cc; margin-bottom: 5px;">Portfolio Website</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 5px;">Personal portfolio showcasing web development skills</p>
+                    <span style="color: #888; font-size: 0.8rem;">HTML, CSS, JavaScript</span>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <h4 style="color: #0066cc; margin-bottom: 5px;">WPD Practicals</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 5px;">Collection of web programming practical assignments</p>
+                    <span style="color: #888; font-size: 0.8rem;">HTML, CSS, PHP</span>
+                </div>
+            </div>
+            
+            <!-- Achievements Card -->
+            <div class="card">
+                <h3>🏆 Achievements</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;">🎯 Top performer in Web Programming</li>
+                    <li style="margin-bottom: 10px;">💻 Completed 50+ coding challenges</li>
+                    <li style="margin-bottom: 10px;">📚 Active learner in modern web technologies</li>
+                </ul>
+            </div>
+            
+            <!-- Contact Card -->
+            <div class="card">
+                <h3>📞 Let's Connect</h3>
+                <p>Interested in collaborating or discussing technology? Feel free to reach out!</p>
+                <div style="display: flex; gap: 15px; margin-top: 15px;">
+                    <a href="mailto:yashdate01@gmail.com" style="
+                        padding: 8px 16px; 
+                        background: linear-gradient(135deg, #004080, #0066cc);
+                        color: white;
+                        text-decoration: none;
+                        border-radius: 8px;
+                        font-size: 0.9rem;
+                        transition: all 0.3s ease;
+                    " onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+                        Email Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
